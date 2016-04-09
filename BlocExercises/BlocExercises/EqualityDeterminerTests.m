@@ -2,7 +2,7 @@
 //  EqualityDeterminerTests.m
 //  BlocExercises
 //
-//  Created by Aaron Brager on 6/10/14.
+//  Created by Noe .
 //
 //
 
