@@ -12,7 +12,8 @@
 
 - (NSString *)favoriteDrinkForStarTrekCharacterDictionary:(NSDictionary *)characterDictionary {
     /* WORK HERE */
-    return @"";
+    NSString *returnString = characterDictionary[@"favorite drink"];
+    return returnString;
 }
 
 - (NSArray *)arrayOfFavoriteDrinksForStarTrekCharacters:(NSArray *)charactersArray {

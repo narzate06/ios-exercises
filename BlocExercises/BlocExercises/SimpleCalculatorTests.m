@@ -46,7 +46,7 @@
     resultNumber = [self.calculator addNumber:firstOperand toNumber:secondOperand];
     XCTAssertTrue(resultNumber == 2, @"-2 + 4 = 2");
 }
-
+ 
 - (void) testThatDivisionWorks {
     NSInteger dividend = 15;
     NSInteger divisor = 5;
