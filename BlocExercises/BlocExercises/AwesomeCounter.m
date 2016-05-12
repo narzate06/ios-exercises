@@ -12,7 +12,24 @@
 
 - (NSString *) stringWithNumbersBetweenNumber:(NSInteger)number andOtherNumber: (NSInteger)otherNumber {
     /* WORK HERE */
-    return @"";
+    NSInteger lowNumber;
+    NSInteger highNumber;
+    
+    if (number < otherNumber) {
+        lowNumber = number;
+        highNumber = otherNumber;
+    } else {
+        lowNumber = otherNumber;
+        highNumber = number;
+    }
+    
+    NSMutableString *allNumbers = [[NSMutableString alloc] init];
+    for (NSInteger n = lowNumber; n <= highNumber; n++) {
+        [allNumbers appendFormat:@"%ld", (long)n];
+        NSLog(@"%ld", (long)n);
+        
+    }
+    
+    return allNumbers;
 }
-
 @end
