@@ -12,21 +12,39 @@
 
 - (NSArray *) arrayOfStarTrekCharactersFromString:(NSString *)characterString {
     /* WORK HERE */
-    return @[];
+    NSArray *returnArray = [characterString componentsSeparatedByString:@";"];
+
+    return returnArray;
 }
 
 - (NSString *) stringOfStarTrekCharactersFromArray:(NSArray *)characterArray {
     /* WORK HERE */
-    return @"";
+    NSString *returnString = [characterArray componentsJoinedByString:@";"];
+    return returnString;
 }
 
 - (NSArray *) alphabeticallySortedStarTrekCharactersFromArray:(NSArray *)characterArray {
     /* WORK HERE */
-    return @[];
+   
+    NSArray *sortedArray =
+    [characterArray sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
+    return sortedArray;
 }
 
 - (BOOL) characterArrayContainsWorf:(NSArray *)characterArray {
     /* WORK HERE */
+    
+    
+
+    
+    for (NSString *characterName in characterArray) {
+        // use rangeOfString to see if it contains "worf"
+        if ([characterName hasSuffix:@" worf"]) {
+            NSRange range = [characterName rangeOfString:@" worf" options:NSCaseInsensitiveSearch];
+            if ( range )
+        }
+        // if it does, return YES
+    }
     return NO;
 }
 
