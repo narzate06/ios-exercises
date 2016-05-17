@@ -33,19 +33,11 @@
 
 - (BOOL) characterArrayContainsWorf:(NSArray *)characterArray {
     /* WORK HERE */
-    
-    
-
-    
-    for (NSString *characterName in characterArray) {
-        // use rangeOfString to see if it contains "worf"
-        if ([characterName hasSuffix:@" worf"]) {
-            NSRange range = [characterName rangeOfString:@" worf" options:NSCaseInsensitiveSearch];
-            if ( range )
-        }
-        // if it does, return YES
+    for (NSString *characterName in characterArray){
+        NSRange range = [characterName rangeOfString:@"Worf"]; if (range.location != NSNotFound)
+        {return YES;}
     }
     return NO;
-}
+    }
 
 @end
