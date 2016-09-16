@@ -11,7 +11,7 @@ func favoriteCheeseStringWithCheese(cheese: String) -> String {
     return cheese
 }
 
-let fullSentence = favoriteCheeseStringWithCheese("cheddar")
+var fullSentence = favoriteCheeseStringWithCheese(cheese: "My favorite cheese is cheddar")
 // Make fullSentence say "My favorite cheese is cheddar."
 
 /*
@@ -20,14 +20,15 @@ Arrays & Dictionaries
 
 */
 
-let numberArray = [1, 2, 3, 4]
+var numberArray = [1, 2, 3, 4]
+numberArray.append(5)
 // Add 5 to this array
 // WORK HERE
 
-let numberDictionary = [1 : "one", 2 : "two", 3 : "three", 4 : "four"]
+var numberDictionary = [1 : "one", 2 : "two", 3 : "three", 4 : "four"]
 // Add 5 : "five" to this dictionary
 // WORK HERE
-
+numberDictionary[5] = "Five"
 /*
 
 Loops
@@ -36,9 +37,14 @@ Loops
 
 // Use a closed range loop to print 1 - 10, inclusively
 // WORK HERE
-
+for i in 1...10 {
+    print(i)
+}
 // Use a half-closed range loop to print 1 - 10, inclusively
 // WORK HERE
+for i in 1..<10 {
+    print(i)
+}
 
 let worf = [
     "name": "Worf",
@@ -58,10 +64,13 @@ let characters = [worf, picard]
 func favoriteDrinksArrayForCharacters(characters:[[String : String]]) -> [String] {
     // return an array of favorite drinks, like ["prune juice", "tea, Earl Grey, hot"]
     // WORK HERE
-    return []
+    
+    let favDrink = characters[]]
+    return[favDrink]
+    
 }
 
-let favoriteDrinks = favoriteDrinksArrayForCharacters(characters)
+let favoriteDrinks = favoriteDrinksArrayForCharacters(characters: characters)
 
 favoriteDrinks
 
@@ -86,8 +95,8 @@ let marjorieBrowneUser = ["name" : "Marjorie Lee Browne", "occupation" : "Mathem
 
 // If your emailFromUserDict function is implemented correctly, both of these should output "true":
 
-emailFromUserDict(mostafaElSayedUser) == "mael-sayed@gatech.edu"
-emailFromUserDict(marjorieBrowneUser) == ""
+emailFromUserDict(userDict: mostafaElSayedUser) == "mael-sayed@gatech.edu"
+emailFromUserDict(userDict: marjorieBrowneUser) == ""
 
 /*
 
