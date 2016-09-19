@@ -66,10 +66,15 @@ func favoriteDrinksArrayForCharacters(characters:[[String : String]]) -> [String
     // return an array of favorite drinks, like ["prune juice", "tea, Earl Grey, hot"]
     // WORK HERE
     
-    let favDrink = characters[]]
-    return[favDrink]
-    
-}
+    var favDrink: [String]
+    favDrink = []
+    for character in characters {
+        favDrink.append(character["favorite drink"]!)
+        
+    }
+    return favDrink
+    }
+
 
 let favoriteDrinks = favoriteDrinksArrayForCharacters(characters: characters)
 
@@ -85,9 +90,16 @@ func emailFromUserDict(userDict : [String : String]) -> String {
     // Return the user's email address from userDict, or return "" if they don't have one
     
     // WORK HERE
-    return "user@example.com"
+    let email = userDict["email"]
+    if email != nil {
+        let emailAddr = email!
+        //print(emailAddr)
+        return emailAddr
+    }else {
+        return "";
+    }
+    
 }
-
 
 let mostafaElSayedUser = ["name" : "Mostafa A. El-Sayed", "occupation" : "Chemical Physicist", "email" : "mael-sayed@gatech.edu", "awards" : "Langmuir Award in Chemical Physics, Arabian Nobel Prize, Ahmed Zewail prize, The Class of 1943 Distinguished Professor, 2007 US National Medal of Science", "birthday" : "8 May 1933"]
 
@@ -110,9 +122,14 @@ Functions
 let strings = ["milk", "eggs", "bread", "challah"]
 
 // WORK HERE - make your function and pass `strings` in
+func arrayOfStrings(strings : [String : String]) -> String {
+    let allStrings = Array([strings].joined())
 
-let expectedOutput = "milk;eggs;bread;challah"
 
+//let expectedOutput = "milk;eggs;bread;challah"
+    let expectedOutput = allStrings
+    return expectedOutput
+}
 /*
 
 Closures
@@ -120,6 +137,7 @@ Closures
 */
 
 let cerealArray = ["Golden Grahams", "Cheerios", "Trix", "Cap'n Crunch OOPS! All Berries", "Cookie Crisp"]
-
+let sortedCerealArray = {print (cerealArray.sorted { $0 > $1 })}
+sortedCerealArray()
 // Use a closure to sort this array alphabetically
 // WORK HERE
