@@ -8,10 +8,10 @@ Strings
 
 func favoriteCheeseStringWithCheese(cheese: String) -> String {
     // WORK HERE
-    return cheese
+    return "My favorite cheese is \(cheese)"
 }
 
-var fullSentence = favoriteCheeseStringWithCheese(cheese: "My favorite cheese is cheddar")
+var fullSentence = favoriteCheeseStringWithCheese(cheese: "cheddar")
 // Make fullSentence say "My favorite cheese is cheddar."
 
 /*
@@ -122,14 +122,15 @@ Functions
 let strings = ["milk", "eggs", "bread", "challah"]
 
 // WORK HERE - make your function and pass `strings` in
-func arrayOfStrings(strings : [String : String]) -> String {
-    let allStrings = Array([strings].joined())
+func arrayOfStrings(strings : [String]) -> String {
+    let allStrings = strings.joined(separator: ";")
 
 
 //let expectedOutput = "milk;eggs;bread;challah"
-    let expectedOutput = allStrings
-    return expectedOutput
+    //let expectedOutput = allStrings
+    return allStrings
 }
+arrayOfStrings(strings: strings)
 /*
 
 Closures
@@ -137,7 +138,7 @@ Closures
 */
 
 let cerealArray = ["Golden Grahams", "Cheerios", "Trix", "Cap'n Crunch OOPS! All Berries", "Cookie Crisp"]
-let sortedCerealArray = {print (cerealArray.sorted { $0 > $1 })}
-sortedCerealArray()
+let sortedCerealArray =  cerealArray.sorted { $0 > $1 }
+sortedCerealArray
 // Use a closure to sort this array alphabetically
 // WORK HERE
